@@ -18,6 +18,7 @@ $produtos = $result ? $result->fetch_all(mode: MYSQLI_ASSOC) : [];
 </head>
 
 <body>
+    <a href="/cadastrar.php">cadastar produto</a>
     <h1>Produtos</h1>
     <?php if (count($produtos) === 0): ?>
 
