@@ -53,8 +53,9 @@ Values(?, ?, ?, ?);";
         <label for="nome">Quantidade</label>
         <input required type="number" id="quantidade" name="quantidade" value="<?= $_POST['quantidade'] ?? '' ?>">
         <label for="nome">Descrição</label>
-        <textarea required type="text" id="descricao" name="descricao" value="<?= $_POST['descricao'] ?? '' ?>"></textarea>
-            <button type="submit" >Cadastrar</button>
+        <textarea required type="text" id="descricao" name="descricao"
+            value="<?= $_POST['descricao'] ?? '' ?>"></textarea>
+        <button type="submit">Cadastrar</button>
     </form>
 </body>
 

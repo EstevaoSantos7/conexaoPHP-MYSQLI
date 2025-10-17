@@ -21,7 +21,7 @@ $produtos = $result ? $result->fetch_all(mode: MYSQLI_ASSOC) : [];
     <a href="/cadastrar.php">cadastar produto</a>
     <h1>Produtos</h1>
     <?php if (count($produtos) === 0): ?>
-
+<p>não existe produtos cadastrados</p>
     <?php else: ?>
         <div class="produtos">
             <?php foreach ($produtos as $p): ?>
@@ -29,9 +29,9 @@ $produtos = $result ? $result->fetch_all(mode: MYSQLI_ASSOC) : [];
                     <img src="https://placehold.co/200" alt="">
                     <h2><?= $p['nome'] ?></h2>
                     <p><?= $p['preco'] ?></p>
-                    <p><?= $p['qunatidade'] ?></p>
+                    <p><?= $p['quantidade'] ?></p>
                     <p><?= $p['descricao'] ?></p>
-                    <a href="./editar.php?id<?= $p['id'] ?>">Editar</a>
+                    <a href="./editar.php?id=<?= $p['id'] ?>">Editar</a>
                 </div>
             <?php endforeach ?>
         </div>
