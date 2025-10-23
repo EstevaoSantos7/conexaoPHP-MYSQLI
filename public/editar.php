@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if ($nome === '' || $descricao === '' || $quantidade === '' || $preco === '') {
         $erro = 'Preencha todos os campos';
     } else {
-        $preco = str_replace(',', '.', $preco);  // Converte vírgula para ponto, para garantir que o valor seja um float válido.
+      
         $preco = (float) $preco;
         $quantidade = (int) $quantidade;
         
